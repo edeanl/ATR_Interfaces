@@ -1,0 +1,35 @@
+# ATR Path list visualizer (Trajectory Generator)
+atr_path_list_subscriber_tg:
+  ros__parameters:
+    # Topic name publishing the atr path list
+    atr_path_topic_name: "atr_path_list"
+    # Sample time to publish the visualization markers
+    period_ms: 1000
+    # Reference frame 
+    frame_id: "map"
+    # TOpic name to publish the marker array (visualization in rviz)
+    path_marker_topic_name: "atr_paths_marker"
+    # Color identifier for now limited to (0-5)
+    color_id: 0
+    # Defines the line thickness and the size of the point for the trajectories  
+    size: 0.02
+    # Alpha channel for the line
+    alpha: 1.0
+
+# ATR Path list visualizer (Fleet Control)
+atr_path_list_subscriber_fc:
+  ros__parameters:
+    # Topic name publishing the atr path list
+    atr_path_topic_name: "fleet_atr_path_list"
+    # Sample time to publish the visualization markers
+    period_ms: 1000
+    # Reference frame
+    frame_id: "map"
+    # TOpic name to publish the marker array (visualization in rviz)
+    path_marker_topic_name: "fleet_atr_paths_marker"
+    # Color identifier for now limited to (0-5)
+    color_id: 5
+    # Defines the line thickness and the size of the point for the trajectories 
+    size: 0.005
+    # Alpha channel for the line
+    alpha: 0.80

@@ -1,0 +1,11 @@
+atr_state_list_subscriber:
+  ros__parameters:
+    # Reference frame for the visualization objects
+    frame_id: map
+    # Namespace to group the visualization markers
+    marker_namespace: atr_states_objects
+    # Topic name for the marker array
+    marker_topic_name: atr_markers
+    # Topic name where the ATRState will be published. This node transforms this state into visualization markers
+    subs_topic_name: atr_state_list
+    

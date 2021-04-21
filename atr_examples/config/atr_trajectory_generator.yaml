@@ -1,0 +1,21 @@
+atr_trajectory_generator:
+  ros__parameters:
+    # Topic name for the ATRState list needed to get the current ATR poses
+    atr_list_topic_name: atr_state_list
+    # Topic to publish the list with all the ATR Paths 
+    atr_path_topic_name: atr_path_list
+    # Service name to request the ATR Formation information
+    formation_list_service_name: get_atr_formation
+    # Reference frame
+    frame_id: map
+    # Service name to request the non accessible areas 
+    nona_list_service_name: get_nona_list
+    # Topic name to obtain the Object List (Static and Dynamic)
+    object_list_topic_name: object_list
+    # Service name to send the ATR Path List (e.g. to ATR Fleet Control)
+    path_list_service_name: update_atr_path_list
+    # Sample rate of the main thread (to simulate the trajectory generation)
+    period_ms: 1000
+    # Service name to receive the updated information of the dynamic object prediction 
+    predicted_obj_list_service_name: update_pred_objects
+    

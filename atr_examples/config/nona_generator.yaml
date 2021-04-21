@@ -1,0 +1,10 @@
+nona_generator:
+  ros__parameters:
+    # Reference frame 
+    frame_id: map
+    # Topic name to publish the visualization markers (needed in rviz)
+    marker_topic_name: nona_markers
+    # Service name to send the updated information of the NONA objects
+    service_name: get_nona_list
+    # The NONA objects are also continuously published to visualize them in rviz
+    topic_name: nona_list

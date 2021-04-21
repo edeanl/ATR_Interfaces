@@ -1,0 +1,32 @@
+# Parameters for the ATR 
+atr1_state_publisher:
+  ros__parameters:
+    # ATR ID
+    id: 1
+    # Reference Frame 
+    frame_id: "map"
+    # Sample rate (in ms)
+    period_ms: 10
+    # Dummy goal (This data will be defined during execution)
+    # TODO: who provides this data? 
+    goal: [-1.2, 0.8]
+    # Dummy data to generate the ATRState
+    radius: 0.8
+    # Update ATR Path service name
+    atr_path_service_prefix: "path_atr_"
+
+atr2_state_publisher:
+  ros__parameters:
+    # ATR ID
+    id: 10
+    # Reference Frame
+    frame_id: "map"
+    # Sample time
+    period_ms: 15
+    # Dummy goal (This data will be defined during execution)
+    # TODO: who provides this data? 
+    goal: [-1.7, -0.5]
+    # Dummy data to generate the ATRState
+    radius: 1.3
+    # Update ATR Path service name
+    atr_path_service_prefix: "path_atr_"

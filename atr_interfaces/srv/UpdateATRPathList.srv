@@ -1,0 +1,8 @@
+# New path for the ATR 
+atr_interfaces/ATRPathList list
+---
+# true if the objects are updated  
+bool success 
+
+# In case of error, we can provide feedback for the source 
+atr_interfaces/ATRError error

@@ -1,0 +1,9 @@
+# Object Type 
+# List with updated objects 
+atr_interfaces/PredictedObjectEllipseList p_list
+---
+# true if the objects are updated  
+bool success 
+
+# In case of error, we can provide feedback for the source 
+atr_interfaces/ATRError error

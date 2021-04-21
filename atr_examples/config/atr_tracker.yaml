@@ -1,0 +1,18 @@
+# Parameters for the node ATR Tracker
+atr_tracker:
+  ros__parameters:
+    # Topic name where the ATRState list will be published
+    topic_name: "atr_state_list"
+    
+    # Reference Frame
+    frame_id: "map"
+    
+    # List of operative ATRS. ATRs which can receive jobs. The size of this list will define the number of subscribers the ATR list node should create.
+    atr_ids: [1, 10]
+    
+    # Defines the elapsed time that the subscribers wait until changing the full_state flag. When an ATR stops publishing data (odom/fused_odom), the ATR list publisher should change the data type to optom only because the odom data is outdated and should not be considered.
+    watchdog_time: 1.0
+
+    # Sample rate for the internal publisher in ms
+    period_ms: 10
+

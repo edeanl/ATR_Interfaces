@@ -1,0 +1,46 @@
+# Parameters for the Object List publisher/server
+object_list_server:
+  ros__parameters:
+    # Topic name where the Predicted Object list will be published
+    p_obj_topic_name: "atr_pred_objects"
+    
+    # Update Object List service name. This service should be called by the Object Detector module
+    srv_name: "update_object_list"
+
+    # Service name to send the updated predicted objects list. This is the name of the service which the client in this module will connect to. The service is provided by, e.g. the ATRTrajectoryGenerator.
+    client_name: "update_p_object_list" 
+
+    # Reference Frame
+    frame_id: "map"
+    
+    # Prediction Horizon
+    prediction_horizon: 3 
+
+    # Prediction sampling time in [s]
+    prediction_sample_time: 0.1
+
+dynamic_obstacle_predictor:
+  ros__parameters:
+    # Topic name where the Object list will be published
+    obj_list_topic_name: "object_list"
+
+    # Topic name where the Predicted Object list will be published
+    p_obj_topic_name: "atr_pred_objects"
+    
+    # Service name to send the updated predicted objects list. This is the name of the service which the client in this module will connect to. The service is provided by, e.g. the ATRTrajectoryGenerator.
+    client_name: "update_p_object_list" 
+
+    # Reference Frame
+    frame_id: "map"
+    
+    # Prediction Horizon
+    prediction_horizon: 3 
+
+    # Prediction sampling time in [s]
+    prediction_sample_time: 0.1
+
+    # Update Predicted object list service name
+    # Service name to send the updated predicted objects list. This is the name of the service which the client in
+    # this module will connect to. The service is provided by, e.g. the ATRTrajectoryGenerator.
+    pred_obj_service_name: "update_pred_objects" 
+

@@ -1,0 +1,14 @@
+pred_object_list_subscriber:
+  ros__parameters:
+    # Reference frame
+    frame_id: map
+    # Prefix used to define the child frame to define the predicted object pose
+    pred_frame_id: pred_obj_
+    # Topic name to publish the predicted objects
+    pred_obj_topic_name: atr_pred_objects
+    # Prediction horizon
+    prediction_horizon: 3
+    # Topic name to publish the visualization markers 
+    topic_name: pred_obj_markers
+    # Namespace to group the markers
+    topic_ns: predicted_objs_

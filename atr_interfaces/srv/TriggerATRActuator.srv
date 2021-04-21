@@ -1,0 +1,15 @@
+# Activate actuator
+# 1: ON
+# 0: off
+bool activate_actuator
+
+# Position command
+float32 position
+
+# force command
+float32 force
+---
+bool success
+
+# In case of error, we can provide feedback for the source 
+atr_interfaces/ATRActuatorError error

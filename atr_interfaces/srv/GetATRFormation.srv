@@ -1,0 +1,12 @@
+# Target Formation IDS (array of ids). 
+# If the value is set to -1, the service should provide  all the available formations.
+int64[] formation_ids
+---
+# List of requested Formations
+atr_interfaces/ATRFormationList atr_formation_list
+
+# If the requested formation id is not available (wrong id), the server will return success=false
+bool success
+
+# In case of error, we can provide feedback for the source 
+atr_interfaces/ATRError error

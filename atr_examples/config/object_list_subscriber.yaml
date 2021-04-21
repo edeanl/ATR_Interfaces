@@ -1,0 +1,8 @@
+object_list_subscriber:
+  ros__parameters:
+    # Reference frame
+    frame_id: map
+    # Topic name to publish the visualization markers 
+    marker_topic_name: dys_obj_markers
+    # prefix used in the polygon publishers
+    topic_name_prefix: obj_poly_

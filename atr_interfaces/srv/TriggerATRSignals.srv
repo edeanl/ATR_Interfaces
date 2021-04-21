@@ -1,0 +1,10 @@
+# Request signal actions, divided in levels 
+atr_interfaces/ATRSignalActions actions
+---
+# Array containing the response for each action, [primary, aux1, aux2, ...]
+# 1: action started
+# 0: action not started, an error has been triggered
+bool[] action_started 
+
+# In case of error, we can provide feedback for the source 
+atr_interfaces/ATRSignalError error

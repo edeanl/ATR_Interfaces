@@ -1,0 +1,6 @@
+semantic_segmentation:
+  ros__parameters:
+    # Reference frame
+    frame_id: map
+    # Topic name to publish the Dynamic and Static objects
+    topic_name: object_list

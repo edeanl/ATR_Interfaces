@@ -1,0 +1,5 @@
+# ATR Formation List parameters
+atr_formation_list_server:  
+  ros__parameters:
+    # Service name to request the ATR formation list
+    service_name: "get_atr_formation"

@@ -1,0 +1,2 @@
+# List of available ATRs in the plant. The sum of all the ATRs in the fleet defines the total number of ATRs. This is needed to generate the dynamic publishers and subscribers 
+atr_interfaces/ATRType[] atrs

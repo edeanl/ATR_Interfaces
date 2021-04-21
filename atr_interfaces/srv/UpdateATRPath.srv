@@ -1,0 +1,8 @@
+# New path for a traget ATR. This path is directly commanded to the ATR 
+atr_interfaces/PathWithDTime path
+---
+# true if the objects are updated  
+bool success 
+
+# In case of error, we can provide feedback for the source 
+atr_interfaces/ATRError error
