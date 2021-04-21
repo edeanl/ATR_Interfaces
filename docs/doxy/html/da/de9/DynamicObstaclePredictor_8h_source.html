@@ -85,65 +85,65 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">namespace </span>atr_examples</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">DynamicObstaclePredictor</a> : <span class="keyword">public</span> rclcpp::Node, <span class="keyword">public</span> <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html">AuxTools</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">using</span> PObjEllipseList = atr_interfaces::msg::PredictedObjectEllipseList;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">using</span> ClientUpdatePredObjList = rclcpp::Client&lt;atr_interfaces::srv::UpdatePredictedObjectList&gt;::SharedPtr;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">using</span> ReqUpdatePredObjList = atr_interfaces::srv::UpdatePredictedObjectList::Request::SharedPtr;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">using</span> SrvRespFutureUpdatePObj = rclcpp::Client&lt;atr_interfaces::srv::UpdatePredictedObjectList&gt;::SharedFuture;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  rclcpp::Subscription&lt;atr_interfaces::msg::ObjectList&gt;::SharedPtr subscription_;  </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">bool</span> first_message_;  </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  std::unordered_map&lt;int, int&gt; map_id_index_;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  std::string subs_topic_name_;  </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">DynamicObstaclePredictor</a> : <span class="keyword">public</span> rclcpp::Node, <span class="keyword">public</span> <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html">AuxTools</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">using</span> PObjEllipseList = atr_interfaces::msg::PredictedObjectEllipseList;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">using</span> ClientUpdatePredObjList = rclcpp::Client&lt;atr_interfaces::srv::UpdatePredictedObjectList&gt;::SharedPtr;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">using</span> ReqUpdatePredObjList = atr_interfaces::srv::UpdatePredictedObjectList::Request::SharedPtr;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">using</span> SrvRespFutureUpdatePObj = rclcpp::Client&lt;atr_interfaces::srv::UpdatePredictedObjectList&gt;::SharedFuture;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  rclcpp::Subscription&lt;atr_interfaces::msg::ObjectList&gt;::SharedPtr subscription_;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">bool</span> first_message_;  </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::string pred_obj_topic_name_;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::unordered_map&lt;int, int&gt; map_id_index_;  </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::string update_po_list_client_name_;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::string subs_topic_name_;  </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  std::string frame_id_;  </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  std::string pred_obj_topic_name_;  </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">size_t</span> pred_horizon_;  </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  std::string update_po_list_client_name_;  </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">double</span> delta_time_;  </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  std::string frame_id_;  </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  rclcpp::Publisher&lt;atr_interfaces::msg::PredictedObjectEllipseList&gt;::SharedPtr</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      pred_objects_publisher_;  </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  ClientUpdatePredObjList p_obj_client_;  </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::string p_obj_service_name;  <span class="comment">//&lt; service name to update the predicted object list</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">size_t</span> pred_horizon_;  </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">double</span> delta_time_;  </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  rclcpp::Publisher&lt;atr_interfaces::msg::PredictedObjectEllipseList&gt;::SharedPtr</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      pred_objects_publisher_;  </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ReqUpdatePredObjList request_;  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ClientUpdatePredObjList p_obj_client_;  </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html#aae2c4b0cbea2d43792b16e93df4eb7af">DynamicObstaclePredictor</a>(<span class="comment">/* args */</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  ~<a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">DynamicObstaclePredictor</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html#a28bf85e23b00ba31ab1a654b7bf1693c">init</a>();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> topic_callback(<span class="keyword">const</span> atr_interfaces::msg::ObjectList::SharedPtr msg);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// void wait_for_response(SrvRespFutureUpdatePObj future);</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}  <span class="comment">// namespace atr_examples</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::string p_obj_service_name;  <span class="comment">//&lt; service name to update the predicted object list</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  ReqUpdatePredObjList request_;  </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html#aae2c4b0cbea2d43792b16e93df4eb7af">DynamicObstaclePredictor</a>(<span class="comment">/* args */</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  ~<a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">DynamicObstaclePredictor</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html#a28bf85e23b00ba31ab1a654b7bf1693c">init</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> topic_callback(<span class="keyword">const</span> atr_interfaces::msg::ObjectList::SharedPtr msg);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">// void wait_for_response(SrvRespFutureUpdatePObj future);</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}  <span class="comment">// namespace atr_examples</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassatr__examples_1_1DynamicObstaclePredictor_html"><div class="ttname"><a href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">atr_examples::DynamicObstaclePredictor</a></div><div class="ttdef"><b>Definition:</b> DynamicObstaclePredictor.h:53</div></div>
+<div class="ttc" id="aclassatr__examples_1_1DynamicObstaclePredictor_html"><div class="ttname"><a href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html">atr_examples::DynamicObstaclePredictor</a></div><div class="ttdoc">This class provides the interfaces of the Dynamic Obstacle Predictor.</div><div class="ttdef"><b>Definition:</b> DynamicObstaclePredictor.h:57</div></div>
 <div class="ttc" id="aclassatr__examples_1_1DynamicObstaclePredictor_html_a28bf85e23b00ba31ab1a654b7bf1693c"><div class="ttname"><a href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html#a28bf85e23b00ba31ab1a654b7bf1693c">atr_examples::DynamicObstaclePredictor::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize parameters.</div></div>
 <div class="ttc" id="aclassatr__examples_1_1DynamicObstaclePredictor_html_aae2c4b0cbea2d43792b16e93df4eb7af"><div class="ttname"><a href="../../d9/d89/classatr__examples_1_1DynamicObstaclePredictor.html#aae2c4b0cbea2d43792b16e93df4eb7af">atr_examples::DynamicObstaclePredictor::DynamicObstaclePredictor</a></div><div class="ttdeci">DynamicObstaclePredictor()</div><div class="ttdoc">default constructor</div></div>
-<div class="ttc" id="aAuxTools_8h_html"><div class="ttname"><a href="../../d3/d9b/AuxTools_8h.html">AuxTools.h</a></div></div>
-<div class="ttc" id="aclassatr__examples_1_1AuxTools_html"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html">atr_examples::AuxTools</a></div><div class="ttdef"><b>Definition:</b> AuxTools.h:55</div></div>
+<div class="ttc" id="aAuxTools_8h_html"><div class="ttname"><a href="../../d3/d9b/AuxTools_8h.html">AuxTools.h</a></div><div class="ttdoc">Provides auxiliary tools for the nodes.</div></div>
+<div class="ttc" id="aclassatr__examples_1_1AuxTools_html"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html">atr_examples::AuxTools</a></div><div class="ttdoc">A class to provide useful functions and templates.</div><div class="ttdef"><b>Definition:</b> AuxTools.h:76</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 21 2021 13:57:32 for ATR ROS2 Interfaces Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 21 2021 19:04:50 for ATR ROS2 Interfaces Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

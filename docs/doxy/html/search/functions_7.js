@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pathlistsubscriber_95',['PathListSubscriber',['../da/db9/classatr__examples_1_1PathListSubscriber.html#a4c6234f52e0e0a0b75459bbb593b434a',1,'atr_examples::PathListSubscriber']]],
-  ['predictedobjectlistsubscriber_96',['PredictedObjectListSubscriber',['../dc/d88/classatr__examples_1_1PredictedObjectListSubscriber.html#af426032e94bf61ff94bdf1faeb902b38',1,'atr_examples::PredictedObjectListSubscriber']]]
+  ['objectlistpublisher_97',['ObjectListPublisher',['../dc/d3b/classatr__examples_1_1ObjectListPublisher.html#aa7a56d98822feb27979a2659a3723c2a',1,'atr_examples::ObjectListPublisher']]],
+  ['objectlistserver_98',['ObjectListServer',['../de/d53/classatr__examples_1_1ObjectListServer.html#a5c40c30fce35888027d56308f1392f6c',1,'atr_examples::ObjectListServer']]],
+  ['objectlistsubscriber_99',['ObjectListSubscriber',['../da/dae/classatr__examples_1_1ObjectListSubscriber.html#a9cbdbfd36243214fcba41edc50ddd5f0',1,'atr_examples::ObjectListSubscriber']]]
 ];
