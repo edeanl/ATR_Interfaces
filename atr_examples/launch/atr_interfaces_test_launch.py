@@ -266,7 +266,7 @@ def generate_launch_description():
     ld.add_action(declare_use_rviz_cmd)
 
     # Load nodes (actions)
-    # ld.add_action(rqt_graph_node)
+    ld.add_action(rqt_graph_node)
     ld.add_action(rviz_cmd)
     ld.add_action(atr_formation_list_server)
     ld.add_action(nona_list_pub)
