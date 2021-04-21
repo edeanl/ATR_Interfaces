@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ATR ROS2 Interfaces Project: /home/dean/ros2/workspaces/atr_comm_interfaces_ws/src/atr_examples/include/atr_examples/AuxTools.h Source File</title>
+<title>ATR ROS2 Interfaces Project: AuxTools.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -129,76 +129,59 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  geometry_msgs::msg::Point32 <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#abeaa686c5cfa6389ee4986f5c8f3c2e8">set_point</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="comment">// // clang-format off</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="comment">// /**</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="comment">//  * @brief Set the object header object</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="comment">//  *</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">//  * @param frame reference frame name</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="comment">//  * @param c_time current time</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="comment">//  * @param o_class object class from atr_interfaces::msg::ObjectClass::&lt;UNKNOWN, HUMAN, ...&gt;</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="comment">//  * @param o_type object type from atr_interfaces::msg::ObjectType::&lt;STATIC, DYNAMIC, ...&gt;</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="comment">//  * @param o_id object id</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">//  * @param o_idx object index, used for creating a id/index map</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="comment">//  * @param aux_object</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="comment">//  */</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="comment">// void set_object_header(const std::string frame, const rclcpp::Time&amp; c_time, const int8_t o_class,</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="comment">//                        const int8_t o_type, const int64_t o_id, const int64_t o_idx,</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="comment">//                        atr_interfaces::msg::ObjectStamped&amp; aux_object);</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="comment">// // clang-format on</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  atr_interfaces::msg::ObjectStamped <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#a572fa6a294aff6f8162ef5ed5150cef6">set_object</a>(<span class="keyword">const</span> std::string frame, <span class="keyword">const</span> rclcpp::Time&amp; c_time,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                <span class="keyword">const</span> int8_t o_class, <span class="keyword">const</span> int8_t o_type, <span class="keyword">const</span> int64_t o_id,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                                                <span class="keyword">const</span> int64_t o_idx, <span class="keyword">const</span> std::vector&lt;Eigen::Vector3d&gt;&amp; v_points);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  atr_interfaces::msg::ObjectStamped <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#a572fa6a294aff6f8162ef5ed5150cef6">set_object</a>(<span class="keyword">const</span> std::string frame, <span class="keyword">const</span> rclcpp::Time&amp; c_time,</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                                <span class="keyword">const</span> int8_t o_class, <span class="keyword">const</span> int8_t o_type, <span class="keyword">const</span> int64_t o_id,</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                <span class="keyword">const</span> int64_t o_idx, <span class="keyword">const</span> std::vector&lt;Eigen::Vector3d&gt;&amp; v_points);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                <span class="keyword">const</span> int64_t o_idx, <span class="keyword">const</span> Eigen::MatrixXd&amp; M_points);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  atr_interfaces::msg::ObjectStamped <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#a572fa6a294aff6f8162ef5ed5150cef6">set_object</a>(<span class="keyword">const</span> std::string frame, <span class="keyword">const</span> rclcpp::Time&amp; c_time,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                                <span class="keyword">const</span> int8_t o_class, <span class="keyword">const</span> int8_t o_type, <span class="keyword">const</span> int64_t o_id,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                                <span class="keyword">const</span> int64_t o_idx, <span class="keyword">const</span> Eigen::MatrixXd&amp; M_points);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="../../de/d55/classatr__examples_1_1AuxTools.html#ab1adbc676a7930f730aafb8df8312eec">  220</a></span>&#160;  std::vector&lt;T&gt; <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#ab1adbc676a7930f730aafb8df8312eec">transform_point</a>(<span class="keyword">const</span> std::vector&lt;U&gt;&amp; in)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    std::vector&lt;T&gt; out;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    T aux;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; i : in)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      aux.x = i.x;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      aux.y = i.y;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      aux.z = i.z;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      out.push_back(aux);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#af022145df94d68395ae7de8e72b27566">get_polygon</a>(<span class="keyword">const</span> v_Point32&amp; obj_points, v_Point&amp; marker_points) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="../../de/d55/classatr__examples_1_1AuxTools.html#ad85be371abfbbda56ff1e984c5c3cf5f">  250</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#ad85be371abfbbda56ff1e984c5c3cf5f">wait_for_srv_response</a>(T future)</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">auto</span> result = future.get();</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">if</span> (!result.get()-&gt;success)</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Something is wrong: &quot;</span> &lt;&lt; result.get()-&gt;error.message &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;};  <span class="comment">// namespace atr_examples</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}  <span class="comment">// namespace atr_examples</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="../../de/d55/classatr__examples_1_1AuxTools.html#ab1adbc676a7930f730aafb8df8312eec">  203</a></span>&#160;  std::vector&lt;T&gt; <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#ab1adbc676a7930f730aafb8df8312eec">transform_point</a>(<span class="keyword">const</span> std::vector&lt;U&gt;&amp; in)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    std::vector&lt;T&gt; out;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    T aux;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; i : in)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      aux.x = i.x;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      aux.y = i.y;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      aux.z = i.z;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      out.push_back(aux);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#af022145df94d68395ae7de8e72b27566">get_polygon</a>(<span class="keyword">const</span> v_Point32&amp; obj_points, v_Point&amp; marker_points) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="../../de/d55/classatr__examples_1_1AuxTools.html#ad85be371abfbbda56ff1e984c5c3cf5f">  233</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../de/d55/classatr__examples_1_1AuxTools.html#ad85be371abfbbda56ff1e984c5c3cf5f">wait_for_srv_response</a>(T future)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">auto</span> result = future.get();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">if</span> (!result.get()-&gt;success)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Something is wrong: &quot;</span> &lt;&lt; result.get()-&gt;error.message &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;};  <span class="comment">// namespace atr_examples</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}  <span class="comment">// namespace atr_examples</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassatr__examples_1_1AuxTools_html_ad02670555f239d2fb578681b58a288e5"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#ad02670555f239d2fb578681b58a288e5">atr_examples::AuxTools::createMarkerMesh</a></div><div class="ttdeci">const visualization_msgs::msg::Marker createMarkerMesh(std::string frame_id, std::string name_space, int id, int shape, double x, double y, double z, double q_w, double q_x, double q_y, double q_z, double s_x, double s_y, double s_z, float r, float g, float b, float a, std::string meshFile=&quot;&quot;) const</div><div class="ttdoc">Create a Marker object.</div></div>
 <div class="ttc" id="aclassatr__examples_1_1AuxTools_html_af022145df94d68395ae7de8e72b27566"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#af022145df94d68395ae7de8e72b27566">atr_examples::AuxTools::get_polygon</a></div><div class="ttdeci">void get_polygon(const v_Point32 &amp;obj_points, v_Point &amp;marker_points) const</div><div class="ttdoc">Get the polygon points from a vector of geometry_msgs::msg::Point32 This function generate a closed p...</div></div>
 <div class="ttc" id="aclassatr__examples_1_1AuxTools_html_ab269a72c542432dfdb638202dd57c327"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#ab269a72c542432dfdb638202dd57c327">atr_examples::AuxTools::Rz</a></div><div class="ttdeci">static Eigen::Matrix3d Rz(double theta_rad)</div><div class="ttdoc">Auxiliary function to compute a basic Rotation matrix around z.</div></div>
 <div class="ttc" id="aclassatr__examples_1_1AuxTools_html_a572fa6a294aff6f8162ef5ed5150cef6"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#a572fa6a294aff6f8162ef5ed5150cef6">atr_examples::AuxTools::set_object</a></div><div class="ttdeci">atr_interfaces::msg::ObjectStamped set_object(const std::string frame, const rclcpp::Time &amp;c_time, const int8_t o_class, const int8_t o_type, const int64_t o_id, const int64_t o_idx, const std::vector&lt; Eigen::Vector3d &gt; &amp;v_points)</div><div class="ttdoc">Set the object object.</div></div>
-<div class="ttc" id="aclassatr__examples_1_1AuxTools_html_ad85be371abfbbda56ff1e984c5c3cf5f"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#ad85be371abfbbda56ff1e984c5c3cf5f">atr_examples::AuxTools::wait_for_srv_response</a></div><div class="ttdeci">void wait_for_srv_response(T future)</div><div class="ttdoc">wait for service response callback function, used to create non-blocking calls</div><div class="ttdef"><b>Definition:</b> AuxTools.h:250</div></div>
+<div class="ttc" id="aclassatr__examples_1_1AuxTools_html_ad85be371abfbbda56ff1e984c5c3cf5f"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#ad85be371abfbbda56ff1e984c5c3cf5f">atr_examples::AuxTools::wait_for_srv_response</a></div><div class="ttdeci">void wait_for_srv_response(T future)</div><div class="ttdoc">wait for service response callback function, used to create non-blocking calls</div><div class="ttdef"><b>Definition:</b> AuxTools.h:233</div></div>
 <div class="ttc" id="aclassatr__examples_1_1AuxTools_html_abeaa686c5cfa6389ee4986f5c8f3c2e8"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#abeaa686c5cfa6389ee4986f5c8f3c2e8">atr_examples::AuxTools::set_point</a></div><div class="ttdeci">geometry_msgs::msg::Point32 set_point(const Eigen::MatrixXd &amp;Points, int64_t idx)</div><div class="ttdoc">Generates a Point32 from a Eigen::MatrixXd.</div></div>
-<div class="ttc" id="aclassatr__examples_1_1AuxTools_html_ab1adbc676a7930f730aafb8df8312eec"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#ab1adbc676a7930f730aafb8df8312eec">atr_examples::AuxTools::transform_point</a></div><div class="ttdeci">std::vector&lt; T &gt; transform_point(const std::vector&lt; U &gt; &amp;in) const</div><div class="ttdoc">transforms a vector of Points from type U to type T</div><div class="ttdef"><b>Definition:</b> AuxTools.h:220</div></div>
+<div class="ttc" id="aclassatr__examples_1_1AuxTools_html_ab1adbc676a7930f730aafb8df8312eec"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html#ab1adbc676a7930f730aafb8df8312eec">atr_examples::AuxTools::transform_point</a></div><div class="ttdeci">std::vector&lt; T &gt; transform_point(const std::vector&lt; U &gt; &amp;in) const</div><div class="ttdoc">transforms a vector of Points from type U to type T</div><div class="ttdef"><b>Definition:</b> AuxTools.h:203</div></div>
 <div class="ttc" id="aclassatr__examples_1_1AuxTools_html"><div class="ttname"><a href="../../de/d55/classatr__examples_1_1AuxTools.html">atr_examples::AuxTools</a></div><div class="ttdoc">A class to provide useful functions and templates.</div><div class="ttdef"><b>Definition:</b> AuxTools.h:76</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 21 2021 19:04:50 for ATR ROS2 Interfaces Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 21 2021 20:04:24 for ATR ROS2 Interfaces Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
