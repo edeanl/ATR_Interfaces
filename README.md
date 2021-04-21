@@ -47,3 +47,7 @@ ros2 launch atr_examples atr_interfaces_test_launch.py
 ```
 
 ![alt text](https://github.com/edeanl/ATR_Interfaces/blob/main/docs/Figures/atr_scenario_rviz.png "ATR scenario in Rviz")
+
+## TODO
+
+The documentation of the modules is not complete, for now, the links point to the same draft pdf file.
