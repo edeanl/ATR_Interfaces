@@ -95,6 +95,7 @@ set(srv_files
   "srv/UpdatePredictedObjectList.srv"
   "srv/UpdateATRPath.srv"
   "srv/UpdateATRPathList.srv"
+  "srv/SetPolygon.srv"
 )
 
 # set(action_files

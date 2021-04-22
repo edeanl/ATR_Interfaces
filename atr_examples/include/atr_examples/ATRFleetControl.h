@@ -62,8 +62,6 @@
 #include "atr_interfaces/srv/trigger_atr_signals.hpp"
 #include "atr_interfaces/srv/trigger_atr_actuator.hpp"
 
-using std::placeholders::_1;
-
 namespace atr_examples
 {
 /** \class ATRFleetControl
