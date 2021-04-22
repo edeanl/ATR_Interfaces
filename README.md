@@ -23,6 +23,7 @@ The scenario includes the following modules:
 - ATR Trajectory Generator
 - ATR Fleet Control
 - ATR Control
+- ROS2-Redis Bridge
 
 The ros packages have been tested in Ubuntu 20.04 with ROS Foxy.
 
@@ -77,3 +78,5 @@ Missing modules:
 - Job-based ATR Scheduler
 - Discrete to Global Pose
 - RTSP Stream
+- ROS2-Redis Bridge
+  
