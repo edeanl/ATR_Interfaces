@@ -232,7 +232,7 @@ void ATRStatePublisher::timer_callback()
     tf2::convert(tf2::toMsg(tf), message.state.goal);
 
     // Over all state of the ATR
-    message.state.overall.status = atr_interfaces::msg::ATRStateOverall::CHARGING;
+    message.state.overall.status.push_back(atr_interfaces::msg::ATRStateOverall::CHARGING);
 
     // ATR mission
     message.state.mission.status = atr_interfaces::msg::ATRStateMission::ARRIVED;

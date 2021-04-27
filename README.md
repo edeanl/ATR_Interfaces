@@ -11,19 +11,19 @@ This repository provides ros2 packages with the communication interfaces for the
 
 The scenario includes the following modules:
 
-- ATR Formations
-- Global to Discrete Pose
-- Job-based ATR Scheduler
-- Discrete to Global Pose
-- RTSP Stream
-- ATR Tracker
-- Semantic Segmentation
-- NONA Generator
-- Dynamic Obstacle Prediction
-- ATR Trajectory Generator
-- ATR Fleet Control
-- ATR Control
-- ROS2-Redis Bridge
+1. ATR Formations
+1. Global to Discrete Pose
+1. Job-based ATR Scheduler
+1. Discrete to Global Pose
+1. RTSP Stream
+1. ATR Tracker
+1. Semantic Segmentation
+1. NONA Generator
+1. Dynamic Obstacle Prediction
+1. ATR Trajectory Generator
+1. ATR Fleet Control
+1. ATR Control
+1. ROS2-Redis Bridge
 
 The ros packages have been tested in Ubuntu 20.04 with ROS Foxy.
 

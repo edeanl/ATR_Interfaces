@@ -72,6 +72,7 @@ set(msg_files
   "msg/Ellipse.msg"
   "msg/EllipseStamped.msg"
   "msg/FormationConstraints.msg"
+  "msg/FormationPoses.msg"
   "msg/MyString.msg"
   "msg/ObjectClass.msg"
   "msg/ObjectList.msg"

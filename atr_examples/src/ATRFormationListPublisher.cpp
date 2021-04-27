@@ -50,6 +50,7 @@ void ATRFormationListPublisher::timer_callback()
   message.formations[0].atr_list.push_back(1);
   message.formations[0].atr_list.push_back(2);
   message.formations[0].formation_id = 0;
+
   // The Formation 1 should keep a distance between the two ATRs of 15 cm with a tolerance of 10% and an angle between
   // them of 45°
   message.formations[0].constraints.dist.tolerance = 0.1;

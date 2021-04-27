@@ -6,3 +6,6 @@ int8 formation_id
 
 # Constraints
 atr_interfaces/FormationConstraints constraints
+
+# Formation goals
+atr_interfaces/FormationPoses[] poses
