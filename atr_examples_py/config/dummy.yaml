@@ -1,0 +1,4 @@
+dummy_node:
+  ros__parameters:
+    my_int: 1
+    my_string: "dummy"

@@ -1,4 +1,7 @@
+import os
+from glob import glob
 from setuptools import setup
+
 
 package_name = 'atr_examples_py'
 
@@ -10,8 +13,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        # (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
-        # (os.path.join('share', package_name, 'config'), glob('config/*.yaml'))
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -24,7 +27,8 @@ setup(
         'console_scripts': [
             'minimal_pubsubs_class = atr_examples_py.minimal_pubsubs_class',
             'minimal_publisher = atr_examples_py.minimal_publisher:main',
-            'minimal_subscriber = atr_examples_py.minimal_subscriber:main'
+            'minimal_subscriber = atr_examples_py.minimal_subscriber:main',
+            'dummy_node = atr_examples_py.applications.dummy:main'
         ],
     },
 )
